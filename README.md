@@ -10,10 +10,16 @@
 
 ### Criar um usuário 
 
-![Basta criar um json igual a esse na imagem](bugtracker/blob/main/jsonpost.PNG)
+Crie um json igual a esse abaixo.
+![Basta criar um json igual a esse na imagem](https://github.com/felipe-alves142/bug-tracker/blob/main/jsonpost.PNG)
+No desenvolvimento foi usado o [Postman](https://www.postman.com/downloads/), então recomendo que use o mesmo já que não conheço tão bem outras ferramentas. 
 
 ## Tecnologias 
 
 - Spring Boot 
 - Java 11
 - Sql Server
+
+## Instalação 
+
+- Projeto em desenvolvimento
