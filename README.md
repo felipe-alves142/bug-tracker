@@ -10,7 +10,7 @@
 
 ### Criar um usuário 
 
-![Basta criar um json igual a esse na imagem]
+![Basta criar um json igual a esse na imagem](bugtracker/blob/main/jsonpost.PNG)
 
 ## Tecnologias 
 
