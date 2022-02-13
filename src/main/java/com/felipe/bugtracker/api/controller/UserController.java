@@ -2,23 +2,22 @@ package com.felipe.bugtracker.api.controller;
 
 import com.felipe.bugtracker.domain.dto.response.MessageResponseDTO;
 import com.felipe.bugtracker.domain.model.Users;
-import com.felipe.bugtracker.domain.repository.UserRepository;
-import com.felipe.bugtracker.domain.service.UsersService;
-import lombok.AllArgsConstructor;
+import com.felipe.bugtracker.domain.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import java.util.List;
 
 @RestController
-@AllArgsConstructor
 @RequestMapping("api/v1")
 public class UserController {
+
     @Autowired
-    private UsersService usersService;
+    private UserService userService;
 
-
+    public UserController(UserService usersService) {
+        this.userService = userService;
+    }
 //    @GetMapping
 //    public List<Users> list(){
 //        return userRepository.findAll();
@@ -31,7 +30,11 @@ public class UserController {
 
     @PostMapping("/create")
     public MessageResponseDTO create(@Valid @RequestBody Users users){
-      return create(users);
+        /**
+         *   Na classe create, em vez de usar o save do jpa de forma direta vamos usar um
+         *   com uma regra de negócio.
+          */
+      return userService.salvar(users);
     }
 
 

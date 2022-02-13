@@ -18,27 +18,22 @@ public class Users {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="codigo")
-    private Long Codigo;
+    private Long codigo;
 
     @Size(max=50)
     @NotEmpty
-    @Column(name="nome")
-    private String Nome;
+    private String nome;
 
     @Size(max = 255)
     @Email
     @NotEmpty
-    @Column(name="email")
-    private String Email;
+    private String email;
 
     @Size(min = 8 , max = 10)
     @NotEmpty
-    @Column(name="senha")
-    private String Senha;
+    private String senha;
 
     @Size(max =6)
     @NotEmpty
-    @Column(name = "tipo")
-    private String Tipo;
+    private String tipo;
 }
